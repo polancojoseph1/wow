@@ -1,19 +1,15 @@
-/*
- * Hi! I'm your stylesheet! I've got some sensible defaults here,
- * but feel free to change me to your heart's content!
- */
-
+MAIN
 * {
   box-sizing: border-box;
   font-family: arial, sans-serif;
 }
 
 body {
-  background: linear-gradient(#ffffff, #c0c0c0);
-  height: 100vh;
+  background:  #c0c0c0;
+  height: 100%;
   padding: 0;
   margin: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 nav {
@@ -30,4 +26,348 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* SIDEBAR */
+
+.sidenav {
+  height: 100%; 
+  width: 200px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 15vh;
+  left: -2%;
+  background-color: linear-gradient(#ffffff, #c0c0c0);
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #755151;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* ALL VIDEOS COMPONENT */
+
+.all-wow-videos {
+  color: #333333;
+  font-weight: bolder;
+  margin-left: 27%;
+  margin-bottom: 4%;
+  margin-top: -2%;
+}
+
+.wow {
+  color: #818181;
+}
+
+/* VIDEOS COMPONENT */
+
+.all-videos {
+  position: relative;
+  left: -5%;
+}
+
+.wow-videos {
+  color: #333333;
+  font-weight: bolder;
+  margin-left: 35%;
+  margin-bottom: 4%;
+  margin-top: -2%;
+}
+
+.all-video {
+  display: flex;
+  flex-direction: row;
+}
+
+.under-video {
+  margin-bottom: 120px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.name-frame {
+  position: relative;
+  bottom: -30%;
+  font-size: xx-large;
+}
+
+.name-frame a {
+  color: #818181;
+}
+
+.name-frame a:hover {
+  color: #755151;
+}
+
+.date-frame {
+  position: absolute;
+  left: 56%;
+}
+
+.edit-hover {
+  font-weight: bold;
+}
+
+/* MESSAGE COMPONENT */
+
+.message-board {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ADD VIDEO COMPONENT */
+
+ .add-video-flex {
+  display: flex;
+  position: relative;
+  bottom: 25px;
+}
+
+.video-flex-box {
+  background-color: #333333;
+  margin: 50px auto;
+  width: 35vw;
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.radius-input {
+  border-radius: 10px;
+}
+
+.post-video-button {
+  position: relative;
+  left: 2%;
+  background-color: #c0c0c0;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #333333;
+  padding: 1%
+}
+
+.add-link {
+  position: relative;
+  right: 2%;
+  bottom: 5%;
+}
+
+.add-name {
+  position: relative;
+  right: 7%;
+  bottom: 5%;
+}
+
+.add-description{
+  height: 10px;
+  position: relative;
+  right: 12%;
+  bottom: 5%;
+}
+
+.add-back-video-button {
+  position: relative;
+  background-color: #c0c0c0;
+  left: 9%;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #1b0a64;
+  padding-top: 4.5%;
+  padding-bottom: 4.5%;
+  padding-left:-2%;
+  padding-right: -2%;
+}
+
+/* EDIT VIDEO COMPONENT */
+
+.edit-video-flex {
+  display: flex;
+  position: relative;
+  bottom: 25px;
+}
+
+.edit-video-flex-box {
+  background-color: #333333;
+  margin: 50px auto;
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.video-edit {
+  bottom: 330%;
+}
+
+.update-video-button {
+  position: relative;
+  background-color: #c0c0c0;
+  left: .7%;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #333333;
+  padding: 1%
+}
+
+.delete-video-button {
+  position: relative;
+  left: .7%;
+  background-color: #c0c0c0;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #a72727;
+  padding: 1%
+}
+
+.back-video-button {
+  position: relative;
+  background-color: #c0c0c0;
+  left: -8.5%;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #1b0a64;
+  padding-top: 17%;
+  padding-bottom: 17%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.edit-move {
+  position: relative;
+  bottom: 5%;
+}
+
+.edit-link {
+  position: relative;
+  right: 2%;
+  bottom: 5%;
+}
+
+.edit-name {
+  position: relative;
+  right: 5.8%;
+  bottom: 5%;
+}
+
+.edit-description{
+  height: 10px;
+  position: relative;
+  right: 9.7%;
+  bottom: 5%;
+}
+
+.required-field {
+  color: red;
+  position: relative;
+  left: 8%;
+  bottom: -30%;
+}
+
+.required-field-two {
+  color: red;
+  position: relative;
+  left: 5.5%;
+  bottom: -25%;
+}
+
+.required-field-three {
+  color: red;
+  position: relative;
+  left: 5.8%;
+  bottom: -30%;
+}
+
+.radius-input-link {
+  border-radius: 10px;
+  position: relative;
+  left: 1%;
+}
+
+.radius-input-name {
+  border-radius: 10px;
+  position: relative;
+  left: 2%;
+}
+
+.radius-input-description {
+  border-radius: 10px;
+  position: relative;
+  left: 1%;
+}
+
+/* LOGIN COMPONENT */
+
+.add-email {
+  position: relative;
+  right: 4%;
+  bottom: 5%;
+}
+
+.add-name {
+  position: relative;
+  right: 7%;
+  bottom: 5%;
+}
+
+.log-in-button {
+  position: relative;
+  left: 1%;
+  background-color: #c0c0c0;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #333333;
+  padding: 1%
+}
+
+/* SIGNUP COMPONENT */
+
+.sign-up-name {
+  position: relative;
+  right: 5%;
+  bottom: 5%;
+}
+
+.sign-up-email {
+  position: relative;
+  right: 4.5%;
+  bottom: 5%;
+}
+
+.sign-up-password {
+  height: 10px;
+  position: relative;
+  right: 8%;
+  bottom: 5%;
+}
+
+.sign-up-button {
+  position: relative;
+  background-color: #c0c0c0;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #333333;
+  padding: 1%
 }

@@ -1,15 +1,15 @@
-// `combineReducers` is not currently being used...but it should!
-// When you're ready to use it, un-comment the line below!
+import {combineReducers} from 'redux'
+import videos, {addVideoReducer, getUserReducer, getVideoReducer} from './videos'
+import messages from './messages'
+import auth from './auth'
 
-// import {combineReducers} from 'redux'
-
-const initialState = {}
-
-const rootReducer = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state
-  }
-}
+const rootReducer = combineReducers({
+  videos,
+  newVideo: addVideoReducer,
+  user: getUserReducer,
+  messages,
+  auth,
+  video: getVideoReducer
+})
 
 export default rootReducer

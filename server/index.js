@@ -3,7 +3,6 @@
 const express = require('express')
 const path = require('path')
 const volleyball = require('volleyball')
-
 const app = express()
 
 // logging middleware
@@ -17,6 +16,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, '../public')))
 
 app.use('/api', require('./api')) // include our routes!
+app.use('/api', require('./auth'))
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'))
