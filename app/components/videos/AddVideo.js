@@ -27,7 +27,6 @@ class AddVideo extends React.Component {
 
     handleSubmit() {
       event.preventDefault()
-      console.log(this.props)
         this.props.addVideo(this.props.match.params.id,this.state)
         this.props.history.push(`/videos/${this.props.match.params.id}`);
     }

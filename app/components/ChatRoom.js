@@ -10,7 +10,6 @@ class ChatRoom extends React.Component{
 
     render(){
         const {messages} = this.props
-        console.log(this.props)
         return(
             <div key='message-board' className='message-board'>
             {messages.map(elem => {

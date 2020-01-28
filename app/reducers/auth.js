@@ -24,17 +24,15 @@ export const signup = user => async dispatch => {
   export const login = user => async dispatch => {
     try {
       const {data} = await axios.post(`/api/users/login`, user);
-      console.log(data)
         dispatch(authUser(data))
     } catch (error) {
       console.error(error);
     }
   };
 
-export const logout = () => async dispatch => {
+export const logout = () => async () => {
   try {
     await axios.post('/auth/logout');
-    // dispatch(removeUser());
     localStorage.clear();
     history.push('/videos');
   } catch (err) {

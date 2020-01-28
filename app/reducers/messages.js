@@ -13,7 +13,6 @@ export const gotMessagesThunk = () => {
     return async dispatch => {
         try {
             const {data} = await axios.get('api/messages')
-            console.log('data',data)
             dispatch(getMessages(data))
         } catch (error) {
             console.error(error)

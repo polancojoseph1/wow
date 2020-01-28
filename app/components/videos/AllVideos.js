@@ -15,7 +15,6 @@ class AllVideos extends React.Component {
       }
 
     render() {
-        console.log(this.props.videos)
         const opts = {
             height: '390',
             width: '640',

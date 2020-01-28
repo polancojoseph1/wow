@@ -84,9 +84,7 @@ export const gotUsersVideoThunk = (userId) => {
 export const addVideoThunk = (userId,newVideo) => {
     return async dispatch => {
         try {
-            console.log(userId, newVideo)
             const {data} = await axios.post(`/api/videos/${userId}`, newVideo)
-            console.log('data',data)
             dispatch(addVideo(data))
         } catch (error) {
             console.error(error)
@@ -96,7 +94,6 @@ export const addVideoThunk = (userId,newVideo) => {
 
 export const editVideoThunk = (videoId, newVideo, userId) => {
     return async dispatch => {
-        console.log(newVideo)
         try {
             const {data} = await axios.put(`/api/videos/${videoId}/${userId}`, newVideo)
             dispatch(editVideo(data))

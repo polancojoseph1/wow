@@ -5,7 +5,6 @@ const {
 
 router.post('/login', async (req, res, next) => {
     try {
-      console.log('req')
       const {email, password} = req.body;
       const user = await Users.findOne({where: {email: email}});
       if (!user) {

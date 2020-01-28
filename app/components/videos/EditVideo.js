@@ -46,12 +46,10 @@ class EditVideo extends React.Component {
     }
 
     onReady(event) {
-        // console.log('event',event.target)
         event.target.pauseVideo();
       }
 
     render() {
-        console.log(this.props)
             const opts = {
             height: '200',
             width: '300',
